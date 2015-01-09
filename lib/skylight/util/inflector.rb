@@ -99,7 +99,7 @@ module Skylight
         last  = parts.pop
 
         parts.reverse.inject(last) do |acc, part|
-          part.empty? ? acc : "#{part}(::#{acc})?"
+          part.empty? ? acc : "(#{part}::)?#{acc}"
         end
       end
     end
